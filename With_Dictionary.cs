@@ -39,17 +39,15 @@ public class Program
         }
         else
         {
-            Console.WriteLine("No solution found.");
+            Console.WriteLine("No matching numbers found.");
         }
 	}
 	public static int[] Array_Sum(int[] nums, int target)
     {
         Dictionary<int, int> passedNum = new Dictionary<int, int>();
-
         for (int i = 0; i < nums.Length; i++)
         {
             int leftNum = target - nums[i];
-
             if (passedNum.ContainsKey(leftNum))
             {
                 return new int[] { passedNum[leftNum], i };
